@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-
+import LoginScreen from './screens/login_screen';
+import {UserContext,UserProvider} from './context/UserContext';
+import Dashboard from './screens/dashboard';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <LoginScreen />,
+      errorElement: <h1>404</h1>,
+
+    },
+    {
+      path: "/home",
+      element: <Dashboard />,
+    },
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <UserProvider>
+        <div className="App">
+        <RouterProvider router={router} />
+        </div>
+      </UserProvider>
+
   );
 }
 

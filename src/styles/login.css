@@ -1,0 +1,92 @@
+#login{
+    height: calc(100vh - 40px);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #92a95f;
+}
+
+#login h1{
+    color: #fff;
+    font-size: 4rem;
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-family: "Inter", sans-serif
+}
+
+#login h3{
+    color: #C5D99A;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+
+#login>.left img{
+    width: 90%;
+    object-fit: contain;
+    align-self: center;
+}
+
+#login>.left{
+    background-color: #92a95f;
+    flex:1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#login>.left>p{
+    font-size: 1.01rem;
+    font-family: "Fredoka", sans-serif;
+    color: #fff;
+}
+
+#login>.left>p a{
+    color: #fff;
+}
+
+button.MuiButton-colorPrimary{
+    background-color: #A6BF6F
+}
+
+#login>.right{
+    width: 40%;
+    aspect-ratio: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F3FCE9;
+    border-radius: 20px;
+}
+
+
+#login>.right>.form input{
+    width: 100%;
+}
+
+#login>.right>.form>h2{
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+    color: #000;
+}
+
+
+
+#login>.right>img{
+    width: 80px;
+}
+
+#login>.right>.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
