@@ -7,7 +7,7 @@ const UserContext = createContext({user:{name:'',email:'',sessionId:'',contact:'
 
 const UserProvider = ({children})=>{
     const [cookie] = useCookies(null)
-    const [user,setUser] = useState({name:cookie.name,email:cookie.email,sessionId:cookie.sessionId,contact:cookie.contact,profile:''})
+    const [user,setUser] = useState({name:cookie.name,email:cookie.email,sessionId:cookie.sessionId,contact:cookie.contact,profile:'',type:cookie.type})
     return <UserContext.Provider value={{user,setUser}}>
         {children}
     </UserContext.Provider>

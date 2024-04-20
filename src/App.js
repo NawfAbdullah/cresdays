@@ -3,6 +3,7 @@ import LoginScreen from './screens/login_screen';
 import {UserContext,UserProvider} from './context/UserContext';
 import Dashboard from './screens/dashboard';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import EventScreen from './screens/events_screen';
 function App() {
   const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ function App() {
       path: "/home",
       element: <Dashboard />,
     },
+    {
+      path: "/event/:eventId",
+      element:<EventScreen />
+    }
   ]);
   return (
 

@@ -1,0 +1,39 @@
+.eventcard{
+    width: 95%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 5px;
+    background-color: #C5D99A;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.eventcard img{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.eventcard .right{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.eventcard .right h3,.eventcard .right p{
+    margin: 0;
+    
+}
+.eventcard .right h3{
+    font-size: 1.5rem;
+    
+}
+.eventcard .right p{
+    font-size: 1rem;
+    font-weight:500;
+    color: rgb(122, 122, 122);
+}

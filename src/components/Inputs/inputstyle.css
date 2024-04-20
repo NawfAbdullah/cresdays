@@ -1,0 +1,8 @@
+input[type='date']{
+    padding: 10px;
+    font-size: 1rem;
+    color: #858181;
+    margin: 5px;
+    width: 21ch;
+    borderColor:"rgb(86, 50, 203)"
+}

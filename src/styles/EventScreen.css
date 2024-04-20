@@ -1,0 +1,138 @@
+#event{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#event .list-of-subevents{
+    width: 25vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+#event .list-of-subevents .create-sub-event-container{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 10px;
+
+}
+
+#event .mainscreen{
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+
+
+#event .mainscreen .top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+#event .mainscreen .top img{
+    border-radius: 20px;
+    width: 200px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+
+#event .mainscreen .top .right{
+    text-align: left;
+    margin: 20px;
+}
+
+#event .mainscreen .bottom{
+    background-color: #F3FCE9;
+    height: 55vh;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.sub-event{
+    background-color: #A6BF6F;
+    margin: 10px 5px;
+    height: 100px;
+    padding: 5px 17px;
+    bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.sub-event h3{
+    font-family: "Inter", sans-serif;
+    
+}
+
+.sub-event p{
+    font-family: "Fredoka", sans-serif;
+    color: #d9e7c8;
+    line-height: 1;
+    letter-spacing: 1;
+}
+
+.sub-event h3,.sub-event p{
+    margin: 0;
+}
+
+.sub-event img{
+    width: 80px;
+    height: 80px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+
+.sub-event img+.right{
+    max-width: 70%;
+    overflow: hidden;
+    margin-left: 20px;
+    text-align: left;
+}
+#event .mainscreen .top .right h1,#event .mainscreen .top .right p{
+    margin: 0;
+}
+
+#event .mainscreen .top .right h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+#event .mainscreen .top .right p{
+    font-family: "Fredoka", sans-serif;
+    color: rgb(165, 159, 159);
+    font-size: 1.3rem;
+    letter-spacing: 2;
+}
+
+#event .mainscreen .top .bulu,#event .mainscreen .top .status{
+    width: 45%;
+    border-radius: 20px;
+    height: 300px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #F3FCE9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}

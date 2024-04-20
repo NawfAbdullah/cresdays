@@ -1,0 +1,46 @@
+#profile{
+    text-align: left;
+    background-image: url('../assets/images/natur.jpg');
+    height:200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #fff;
+}
+
+#profile h1{
+    margin: 0;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
+}
+
+#profile .profilepic{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+}
+
+#profile .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#profile .container .details{
+    margin-left: 10px;
+}
+
+
+#profile .container .details p{
+    margin-top: 5px;
+    font-family: "Inter", sans-serif;
+    opacity: 0.7;
+    font-size: 1.1rem;
+}
+/*<a href="https://www.freepik.com/free-vector/silhouette-forest-landscape-background_19043143.htm#query=nature%20illustration&position=2&from_view=keyword&track=ais&uuid=0d75a522-786b-46b9-9548-a4c279536bca">Image by brgfx</a> on Freepik*/
