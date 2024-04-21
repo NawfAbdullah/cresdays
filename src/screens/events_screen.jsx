@@ -19,6 +19,7 @@ import { Summary } from "./Summary";
 import CreateEventModal from "../components/modals/CreateEventModal";
 import { AnimatePresence } from "framer-motion";
 import AddSubEventModal from "../components/modals/AddSubEventModal";
+import SubEventSummary from "./SubEventSummary";
 
   
 
@@ -27,6 +28,7 @@ const EventScreen = () => {
     const [event,setEvent] = useState({})
     const [cookie] = useCookies()
     const [isModalOpen,setIsModalOpen] = useState(false)
+    const [secNum,setSecNum] = useState(-1)
     useEffect(()=>{
         const getData = async ()=>{
             const response = await axios.get(`https://event-management-backend.up.railway.app/api/event/get-one?id=${params.eventId}`,{headers:{
@@ -47,8 +49,9 @@ const EventScreen = () => {
             {isModalOpen && <AddSubEventModal setIsOpen={setIsModalOpen} eventId={params.eventId}/>}
         </AnimatePresence>
         </div>
-        <div className="list-of-subevents">
-            {event?.sub_events?.map(e=><div className="sub-event">
+        <div className="list-of-subevents" style={{textAlign:'left'}}>
+            <h2>Sub Events</h2>
+            {event?.sub_events?.map((e,i)=><div className="sub-event" onClick={()=>setSecNum(i)}>
             <img src={e.img} alt="" />
             <div className="right">
                 <h3>{e.name}</h3>
@@ -60,7 +63,7 @@ const EventScreen = () => {
             </div>
         </div>
         <div className="mainscreen">
-            <Summary eventId={params.eventId} eventname={event?.name} eventPic={event?.img} dateFrom = {event?.date_from} dateTo = {event?.date_to}/>
+            {secNum==-1?<Summary eventId={params.eventId} eventname={event?.name} eventPic={event?.img} dateFrom = {event?.date_from} dateTo = {event?.date_to}/>:<SubEventSummary subEvent={event?.sub_events[secNum]} eventId={params.eventId}/>}
         </div>
     </section>
      );

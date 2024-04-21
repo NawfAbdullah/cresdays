@@ -23,7 +23,6 @@
     display: flex;
     margin-top: auto;
     margin-bottom: 10px;
-
 }
 
 #event .mainscreen{
@@ -64,6 +63,7 @@
 .sub-event{
     background-color: #A6BF6F;
     margin: 10px 5px;
+    width: 90%;
     height: 100px;
     padding: 5px 17px;
     bottom: 20px;
@@ -136,3 +136,37 @@
     justify-content: flex-start;
     align-items: flex-end;
 }
+
+
+#sub{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#sub  .top.left{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#sub  .top.left .bulu,#sub  .top.left .status{
+    width: 90%;
+}
+
+#sub .mainscreen .top.left,#event .mainscreen .bottom.right{
+    width: 45%;
+    height: 100%;
+
+}
+
+#event .mainscreen .bottom.right{
+    max-height: 90vh;
+    min-height: 90vh;
+    overflow-y: scroll;
+}
+
+#event top .right h1, #event .mainscreen .top .right p.desc,#event top .right h1, #event .mainscreen .top .right p.evm{
+    font-size: 1rem;
+}
+
