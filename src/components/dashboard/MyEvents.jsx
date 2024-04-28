@@ -12,7 +12,7 @@ const MyEvent = ({sessionId}) => {
             try {
                 const response = await axios.post('https://event-management-backend.up.railway.app/api/auth/verify-session',{"session_token":sessionId})
                 if(response.status===200){
-                    setEvents(response.data. events_as_studentcoordinator,response.data.events_as_treasurer,response.data.events_as_eventmanager,response.data.events_as_volunteer,response.data.events_as_hod,response.data.events_as_dean)
+                    setEvents(response.data. events_as_studentcoordinator.concat(response.data.events_as_treasurer,response.data.events_as_eventmanager,response.data.events_as_volunteer,response.data.events_as_hod,response.data.events_as_dean))
                     setIsLoading(false)
                 }else{
                     console.log(response.data);

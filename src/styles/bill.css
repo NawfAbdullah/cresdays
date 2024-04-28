@@ -22,3 +22,23 @@
 .bill p{
     text-align: left;
 }
+
+.buttonContainer{
+    display: flex;
+    justify-content: center; 
+    align-items: space-evenly;
+}
+
+.badge{
+    border: 2px solid gray;
+    border-radius: 24% 21% 21% 25% / 50% 49% 52% 52% ;
+    aspect-ratio: 3/1;
+    padding: 5px;
+    margin-left: auto;
+}
+
+@media only screen and (max-width:480px){
+    #sub > div.bottom.right > div > img  {
+        max-width: 100%;
+    }
+}

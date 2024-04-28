@@ -90,3 +90,14 @@ button.MuiButton-colorPrimary{
     justify-content: stretch;
     align-items: stretch;
 }
+
+
+@media only screen and (max-width:721px) {
+    #login > div.left{
+        display: none;
+    }
+
+    #login > div.right{
+        width: 100%;
+    }
+}

@@ -87,9 +87,7 @@ const LoginScreen = () => {
               if(response.status === 200){
                 console.log(response.data);
                 setCookie('sessionId',response.data.session_token)
-                
                 try{
-
                   const userResponse = await axios.post("https://event-management-backend.up.railway.app/api/auth/verify-session",{
                     "session_token": response.data.session_token
                   },)
@@ -101,18 +99,21 @@ const LoginScreen = () => {
                     setCookie("user_id",userResponse.data._id)
                     setCookie('profile',userResponse.data.profile)
                     setCookie('type',userResponse.data.type)
-                    setUser({
-                      "name":userResponse.data.name,
-                      "email":userResponse.data.email,
-                      "user_id":userResponse.data._id,
-                      'profile':userResponse.data.profile,
-                      'type':userResponse.data.type,
-                      "sessionId":response.data.session_token
-
-                    })
-                    navigate('/home')
-
- 
+                    if(userResponse.data.type=='volunteer'){
+                      setError("volunteers don't have access to website use mobile app")
+                      setIsLoading(false)
+                    }else{
+                      setUser({
+                        "name":userResponse.data.name,
+                        "email":userResponse.data.email,
+                        "user_id":userResponse.data._id,
+                        'profile':userResponse.data.profile,
+                        'type':userResponse.data.type,
+                        "sessionId":response.data.session_token
+                      })
+                    
+                      navigate('/home')
+                    }
                   }
                 }catch(err){
                   setIsLoading(false)

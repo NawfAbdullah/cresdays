@@ -114,7 +114,8 @@ export const Summary = ({eventId,eventname,eventPic,dateFrom,dateTo}) => {
         </div>
     </div>
     <div className="bottom">
-        <Chart type='bar' data={{labels,datasets:dataset}} />
+        <Chart type='bar' data={{labels,datasets:dataset}} width={window.innerWidth<500&& "500px"} height={window.innerWidth<500&&"1000px"}
+  />
     </div>
     </> );
 }

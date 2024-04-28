@@ -60,6 +60,13 @@
     border-radius: 20px;
 }
 
+#event > div.mainscreen > div{
+    background-color: #F3FCE9;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
 .sub-event{
     background-color: #A6BF6F;
     margin: 10px 5px;
@@ -137,6 +144,11 @@
     align-items: flex-end;
 }
 
+#event .mainscreen .top .status.volun{
+    align-items: center;
+    flex-direction: column;
+}
+
 
 #sub{
     display: flex;
@@ -170,3 +182,80 @@
     font-size: 1rem;
 }
 
+.bijuku{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.bijuku p{
+    font-size: 2rem;
+}
+
+.show-sub{
+    position: absolute;
+    bottom:20px;
+    right: 20px;
+    z-index: 1002;
+    padding: 10px ;
+    color: #fff;
+    background-color: #A6BF6F;
+    border: none;
+    border-radius: 10px;
+}
+
+.participants{
+    overflow-x: auto;
+}
+
+
+#event > div.mainscreen > div > table{
+    width: 100%; 
+    text-align: left;   
+}
+
+
+#event > div.mainscreen > div > table{
+    margin-top: 5px;
+}
+
+
+@media only screen and (max-width:800px){
+    .list-of-subevents{
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        background-color: #fff;
+    }
+}
+
+@media only screen and (max-width:690px){
+    #sub{
+        flex-direction: column;
+    }
+    #sub > div.bottom.right{
+        min-width:  80vw;
+    }
+}
+
+
+
+@media only screen and (max-width:600px){
+    #event > div.mainscreen > div.top{
+        flex-direction: column;
+    }
+    #event > div.mainscreen > div.top > div.bulu,#event > div.mainscreen > div.top > div.status{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:433px){
+    #event > div.mainscreen > div.top > div.bulu > img{
+        width: 150px;
+    }
+    #event > div.mainscreen > div.top > div.bulu > div > p{
+        font-size: 1rem;
+    }
+}

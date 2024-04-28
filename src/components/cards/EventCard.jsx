@@ -3,11 +3,10 @@ import {  useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import '../../styles/eventcard.css'
 import { useNavigate, useNavigation } from "react-router-dom";
+import Loader from "../Loaders/Loader";
 
 const EventCard = ({eventId,sessionId}) => {
 
-    // const {user} = useContext(UserContext)
-    const [cookie] = useCookies()
     const [isLoading,setIsLoading] = useState(false)
     const [event,setEvent] = useState({ 
         name:'',
@@ -47,7 +46,7 @@ const EventCard = ({eventId,sessionId}) => {
 
     },[eventId])
     var month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-    return ( isLoading? <>loading</>:<div className="eventcard" onClick={()=>{
+    return ( isLoading? <><Loader /><br/> </>:<div className="eventcard" onClick={()=>{
         navigate(`/event/${eventId}`)
     }}>
         <img src={event.poster} alt={event.name} />
