@@ -24,15 +24,11 @@
 
 
 .shakir{
-    width: 400px;
+    width: 40%;
     background-color: white;
-    top: 40vh;
     padding: 20px;
     font-family: "Fredoka", sans-serif;
     border-radius: 20px;
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
 }
 
 .shakir button{
@@ -52,6 +48,21 @@
     overflow-y: scroll;
     
   }
+  #root > div > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-1oqqzyl-MuiContainer-root > div.calendarevents > div.rs-calendar.rs-calendar-panel.rs-calendar-bordered.rs-calendar-compact.rs-calendar > div.rs-calendar-body > div > div.rs-calendar-table-row.rs-calendar-table-header-row,#root > div > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-1oqqzyl-MuiContainer-root > div.calendarevents > div.rs-calendar.rs-calendar-panel.rs-calendar-bordered.rs-calendar-compact.rs-calendar > div.rs-calendar-body > div > div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  #root > div > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-1oqqzyl-MuiContainer-root > div.calendarevents > div.rs-calendar.rs-calendar-panel.rs-calendar-bordered.rs-calendar-compact.rs-calendar > div.rs-calendar-body > div > div > div{
+    width: 28px;
+    cursor: pointer;
+  }
+
 
 
 @media only screen and (max-width:650px) {
@@ -68,8 +79,39 @@
 #profile{
     width: 100vw;
     font-size: 1rem;
+
+    
+}
+
+#root > div > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-1oqqzyl-MuiContainer-root > div.calendarevents > div.shakir.rs-calendar.rs-calendar-panel.rs-calendar-bordered.rs-calendar-compact.rs-calendar{
+    height: 50%;
+}
+.calendarevents{
+    width: 100%;
+    height: 70vh;
+    background-color: #f3ffda;
+    padding: 20px;
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rs-calendar-body{
+    height: 100%;
+}
+
+#root > div > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-1oqqzyl-MuiContainer-root > div.calendarevents > div.shakir.rs-calendar.rs-calendar-panel.rs-calendar-bordered.rs-calendar-compact.rs-calendar > div.rs-calendar-body > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
     
+
+.shakir{
+    width: 90%;
+}
 
 #root > div > div{
     flex-direction: column;

@@ -99,8 +99,9 @@ const LoginScreen = () => {
                     setCookie("user_id",userResponse.data._id)
                     setCookie('profile',userResponse.data.profile)
                     setCookie('type',userResponse.data.type)
-                    if(userResponse.data.type=='volunteer'){
-                      setError("volunteers don't have access to website use mobile app")
+                    setCookie('dept',userResponse.data.department||'')
+                    if(userResponse.data.type=='volunteer'||userResponse.data.type=='participant'){
+                      setError("You don't have access to website use mobile app")
                       setIsLoading(false)
                     }else{
                       setUser({
